@@ -23,3 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleAnswer("answer5");
     });
 })
+
+function dropImage() {
+    const img = document.createElement("img");
+    img.src = "images/iconPrincipale.ico"; // Image temporaire (remplace par ton image)
+    img.classList.add("falling-image");
+
+    // Position aléatoire en haut de l'écran
+    img.style.left = Math.random() * window.innerWidth + "px";
+
+    document.body.appendChild(img);
+
+    // Supprime l'image après l'animation
+    setTimeout(() => {
+        img.remove();
+    }, 3000);
+}
