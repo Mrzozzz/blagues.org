@@ -16,3 +16,13 @@ h2{
     background-color: greenyellow;
 }
 
+.hidden {
+    display: none;
+}
+.answer {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    width: max-content;
+}
