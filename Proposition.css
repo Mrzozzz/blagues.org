@@ -1,55 +1,79 @@
 body {
-    background-color: #ffcc00; /* Jaune pétant mais pas agressif */
-    font-family: "Comic Sans MS", cursive;
-    color: #333;
+    background: linear-gradient(180deg, #78c6ff, #d6f7ff);
+    font-family: "Trebuchet MS", sans-serif;
+    color: #222;
     text-align: center;
+    animation: backgroundWobble 5s infinite alternate;
+}
+
+@keyframes backgroundWobble {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
 }
 
 h1 {
-    font-size: 45px;
-    text-shadow: 3px 3px 5px orange;
-    transform: rotate(-2deg);
-    animation: shake 3s infinite alternate ease-in-out;
+    font-size: 60px;
+    text-shadow: 4px 4px 15px #fff, 0 0 20px #00ffcc;
+    color: #005bbb;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform: rotate(-3deg);
+    animation: bounce 2s infinite alternate ease-in-out;
 }
 
-@keyframes shake {
-    0% { transform: rotate(-2deg); }
-    100% { transform: rotate(2deg); }
+@keyframes bounce {
+    0% { transform: rotate(-3deg) translateY(0); }
+    100% { transform: rotate(3deg) translateY(5px); }
 }
 
 label {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
+    color: #ff6600;
     display: block;
-    margin: 10px 0;
+    margin: 15px 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    transform: skewX(-5deg);
 }
 
 input {
-    font-size: 18px;
-    padding: 10px;
-    border: 3px solid #ff6600;
-    background-color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    border: 3px solid #ff44aa;
+    background: rgba(255, 255, 255, 0.9);
     color: #333;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    animation: inputPulse 2s infinite alternate;
+}
+
+@keyframes inputPulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
 }
 
 button {
-    font-size: 25px;
-    padding: 15px;
-    border: 3px solid #ff4500;
-    background: linear-gradient(45deg, #ff6600, #ffcc00);
+    font-size: 24px;
+    padding: 18px 30px;
+    border: none;
+    background: linear-gradient(45deg, #00ffcc, #0099ff);
+    color: white;
+    border-radius: 50px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
 }
 
 button:hover {
-    background: #ff4500;
-    color: white;
-    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff44aa, #ff6600);
+    transform: translateY(-8px) rotate(2deg);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 audio {
     display: block;
-    margin-top: 20px;
+    margin-top: 30px;
+    filter: drop-shadow(0px 0px 10px #00ffcc);
 }
