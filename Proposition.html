@@ -43,17 +43,14 @@
           </div>
           <button id="playButton" class="btn btn-primary">Envoyer</button>
         </form>
-        <audio id="audioPlayer" src="sound/Envoi.mp3"></audio>
       </div>
     </div>
     <script>
-      document
-        .getElementById("playButton")
-        .addEventListener("click", function (event) {
-          event.preventDefault();
-          const audio = document.getElementById("audioPlayer");
-          audio.play();
-        });
+      document.body.addEventListener("click", function () {
+        const audio = new Audio("sound/jump.mp3");
+        audio.volume = 0.2;
+        audio.play();
+      });
     </script>
   </body>
 </html>
