@@ -113,3 +113,35 @@ form {
     color: yellow;
     box-shadow: 6px 6px 0px #ff3300;
 }
+
+
+nav {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(0deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    background-size: 100% 700%;
+    animation: rainbow 10s infinite linear;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+ul {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    height: 90%;
+}
+@keyframes rainbow {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
