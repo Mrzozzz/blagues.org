@@ -90,3 +90,81 @@ form {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     animation: formFade 2s forwards;
 }
+
+/* Style de base pour toutes les balises <a> */
+a {
+    color: #ff69b4; /* Rose vif */
+    font-family: 'Comic Sans MS', sans-serif; /* Police amusante */
+    font-size: 24px; /* Taille de police grande */
+    text-decoration: underline wavy #ffd700; /* Soulignement ondulé doré */
+    background-color: #7cfc00; /* Vert fluo */
+    padding: 10px 20px; /* Espacement interne */
+    border: 5px dashed #ff4500; /* Bordure en pointillés orange */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 5px 5px 10px #ff6347; /* Ombre portée rouge */
+    transition: all 0.3s ease; /* Transition pour les effets */
+    transform: rotate(-5deg); /* Légère rotation */
+    animation: bounce 2s infinite, colorChange 4s infinite; /* Animations */
+}
+
+/* Effet au survol */
+a:hover {
+    color: #ffd700; /* Texte doré */
+    background-color: #ff69b4; /* Fond rose vif */
+    border-color: #7cfc00; /* Bordure verte fluo */
+    transform: rotate(5deg) scale(1.1); /* Rotation et agrandissement */
+    box-shadow: 10px 10px 20px #ff4500; /* Ombre portée plus grande */
+}
+
+/* Effet lorsque le lien est actif (cliqué) */
+a:active {
+    color: #ff4500; /* Texte orange */
+    background-color: #ffd700; /* Fond doré */
+    border-color: #ff69b4; /* Bordure rose vif */
+    transform: rotate(0deg) scale(0.9); /* Retour à la normale et rétrécissement */
+    box-shadow: 2px 2px 5px #7cfc00; /* Ombre portée plus petite */
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Animation de changement de couleur */
+@keyframes colorChange {
+    0% {
+        color: #ff69b4;
+        background-color: #7cfc00;
+        border-color: #ff4500;
+    }
+    25% {
+        color: #ffd700;
+        background-color: #ff69b4;
+        border-color: #7cfc00;
+    }
+    50% {
+        color: #ff4500;
+        background-color: #ffd700;
+        border-color: #ff69b4;
+    }
+    75% {
+        color: #7cfc00;
+        background-color: #ff4500;
+        border-color: #ffd700;
+    }
+    100% {
+        color: #ff69b4;
+        background-color: #7cfc00;
+        border-color: #ff4500;
+    }
+}
+
+
