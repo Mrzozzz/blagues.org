@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proposez votre blague</title>
+    <title>Propose ta blague</title>
     <link rel="stylesheet" href="Proposition.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="#">Blagues.org</a>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="Proposition.html">Proposer une blague</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section>
-      <h1>Proposez votre blague</h1>
-      <form action="Proposition.php" method="post">
-        <label for="blague">Votre blague :</label>
-        <textarea name="blague" id="blague" cols="30" rows="10"></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
+    <h1>Proposition de blague</h1>
+    <label for="blague">Proposez votre blague</label>
+    <input type="text" id="blague" />
+    <label for="reponse">La réponse</label>
+    <input type="text" id="reponse" />
+    <label for="auteur">Votre nom</label>
+    <input type="text" id="auteur" />
+
+    <button id="playButton">Envoyer</button>
+    <audio id="audioPlayer" src="sound/Envoi.mp3"></audio>
   </body>
 </html>
