@@ -5,6 +5,7 @@ function toggleAnswer(id) {
     } else {
         answer.style.display = "none";
     }
+    document.getElementById("clickSound").play();
 }
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("btn1").addEventListener("click", function () {
@@ -23,6 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleAnswer("answer5");
     });
 })
+
+document.querySelectorAll(".ugly-button").forEach(button => {
+    button.addEventListener("click", function() {
+        let answerId = this.getAttribute("data-answer");
+        toggleAnswer(answerId);
+    });
+});
 
 function dropImage() {
     const img = document.createElement("img");
