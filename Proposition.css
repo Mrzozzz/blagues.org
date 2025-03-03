@@ -1,14 +1,14 @@
 body {
-    background: linear-gradient(180deg, #78c6ff, #d6f7ff);
-    font-family: "Trebuchet MS", sans-serif;
+    background: radial-gradient(circle, #78c6ff, #d6f7ff);
+    font-family: "Comic Sans MS", sans-serif;
     color: #222;
     text-align: center;
-    animation: backgroundWobble 5s infinite alternate;
+    animation: backgroundZoom 5s infinite alternate;
 }
 
-@keyframes backgroundWobble {
-    0% { background-position: 0 0; }
-    100% { background-position: 100px 100px; }
+@keyframes backgroundZoom {
+    0% { background-size: 100%; }
+    100% { background-size: 200%; }
 }
 
 h1 {
