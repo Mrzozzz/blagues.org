@@ -17,5 +17,13 @@
 
     <button id="playButton">Envoyer</button>
     <audio id="audioPlayer" src="sound/Envoi.mp3"></audio>
+    <script>
+      document
+        .getElementById("playButton")
+        .addEventListener("click", function () {
+          const audio = document.getElementById("audioPlayer");
+          audio.play();
+        });
+    </script>
   </body>
 </html>
