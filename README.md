@@ -1,3 +1,4 @@
+
 # Blagues.org
 
 **Blagues.org** est un projet étudiant réalisé dans le cadre de l'apprentissage de Git en BUT Métiers du Multimédia et de l'Internet. L'objectif est de créer une plateforme permettant de répertorier des blagues et de permettre aux utilisateurs de publier de nouvelles blagues (fonctionnalité non prise en charge).

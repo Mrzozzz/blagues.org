@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propose ta blague 🤣</title>
+    <link rel="stylesheet" href="Proposition.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <nav
+        class="flex-column bg-light p-3"
+        style="min-height: 100vh; max-width: 25%"
+      >
+        <img src="images/logo.gif" alt="" style="width: 100%" />
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="goofy" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="goofy" href="Blagues.html">Blagues</a>
+          </li>
+          <li class="nav-item">
+            <a class="goofy" href="Proposition.html">Proposition</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex-grow-1 p-3">
+        <h1>Proposition de blague 🤣</h1>
+        <form action="">
+          <div class="form-group">
+            <label for="blague">Proposez votre blague</label>
+            <input type="text" class="form-control" id="blague" />
+          </div>
+          <div class="form-group">
+            <label for="reponse">La réponse</label>
+            <input type="text" class="form-control" id="reponse" />
+          </div>
+          <div class="form-group">
+            <label for="auteur">Votre nom</label>
+            <input type="text" class="form-control" id="auteur" />
+          </div>
+          <button id="playButton" class="btn btn-primary">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      document.body.addEventListener("click", function () {
+        const audio = new Audio("sound/jump.mp3");
+        audio.volume = 0.2;
+        audio.play();
+      });
+    </script>
+  </body>
+</html>
