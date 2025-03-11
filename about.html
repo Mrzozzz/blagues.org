@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qui sommes-nous ?</title>
+
     <style>
       body {
         font-family: "Comic Sans MS", cursive, sans-serif;
@@ -12,6 +13,11 @@
         text-align: center;
         margin: 0;
         padding: 0;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
       }
 
       h1 {
@@ -46,30 +52,87 @@
         border: 5px solid #ff5722;
         border-radius: 50%;
       }
+
+      .portrait {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .portrait img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: #ff5722;
+        border: 5px dashed #ffeb3b;
+        padding: 10px;
+        border-radius: 0 10px 10px 0;
+        box-shadow: 5px 5px 0 #ff9800;
+      }
+
+      .beauf-button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 1.2em;
+        color: #fff;
+        background-color: #ff9800;
+        border: 3px solid #ffeb3b;
+        border-radius: 10px;
+        text-shadow: 2px 2px #ff5722;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
+      }
+
+      .beauf-button:hover {
+        background-color: #ffeb3b;
+        color: #ff5722;
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
-    <h1>Qui sommes-nous?</h1>
+    <div>
+      <h1>Qui sommes-nous?</h1>
 
-    <h2>
-      Bienvenue sur
-      <img src="images/logo.gif" class="logo" alt="logo de blagues.org" />
-    </h2>
-    <p>
-      L’endroit où le rire est roi et où les blagues fusent plus vite que ton
-      Wi-Fi en amphi ! 😆 Ce projet étudiant, réalisé dans le cadre du BUT
-      Métiers du Multimédia et de l'Internet, est avant tout une excuse pour
-      apprendre Git. Notre mission ? Créer une plateforme dédiée aux blagues, un
-      véritable répertoire de l’humour où chacun peut venir chercher une dose de
-      bonne humeur.
-    </p>
+      <h2>
+        Bienvenue sur
+        <img src="images/logo.gif" class="logo" alt="logo de blagues.org" />
+      </h2>
+      <p>
+        L’endroit où le rire est roi et où les blagues fusent plus vite que ton
+        Wi-Fi en amphi ! 😆 Ce projet étudiant, réalisé dans le cadre du BUT
+        Métiers du Multimédia et de l'Internet, est avant tout une excuse pour
+        apprendre Git. Notre mission ? Créer une plateforme dédiée aux blagues,
+        un véritable répertoire de l’humour où chacun peut venir chercher une
+        dose de bonne humeur.
+      </p>
 
-    <p>
-      📢 ATTENTION ! Cette plateforme te permet de consulter des blagues, mais
-      pas d’en publier de nouvelles (eh oui, on n’a pas encore dompté Git au
-      point d’ouvrir les vannes du chaos humoristique...). Alors, détends-toi,
-      clique, rigole, et souviens-toi : une blague par jour éloigne la déprime
-      pour toujours ! 😜
-    </p>
+      <p>
+        📢 ATTENTION ! Cette plateforme te permet de consulter des blagues, mais
+        pas encore d’en publier de nouvelles (ça arrivera peut-être un jour qui
+        sait...). Alors, détends-toi, clique, rigole, et souviens-toi : une
+        blague par jour éloigne la déprime pour toujours ! 😜
+      </p>
+      <h2>Les créateurs</h2>
+      <div class="portrait">
+        <img src="images/portrait/come.jpeg" alt="" />
+        <img src="images/portrait/landais.jpeg" alt="" />
+        <img src="images/portrait/saegaert.JPG" alt="" />
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <button onclick="propositon()" class="beauf-button">Propositon</button>
+      <button onclick="About()" class="beauf-button">About Us</button>
+    </div>
   </body>
 </html>
