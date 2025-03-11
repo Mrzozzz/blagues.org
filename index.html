@@ -6,15 +6,32 @@
     <title>BLAGUES.ORG</title>
     <link rel="shortcut icon" href="images/iconPrincipale.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
-    Listes des blagues nul : 1. C'est l'histoire du ptit dej, tu la connais ?
-    Pas de bol. 2. C'est l'histoire d'une blague vaseuse Mets tes bottes. 3.
-    C'est l'histoire d'un pingouin qui respire par les fesses Un jour il
-    s’assoit et il meurt. 4. Comment appelle-t-on une chauve-souris avec une
-    perruque ? Une souris. 5. Que dit un escargot quand il croise une limace ? «
-    Oh la belle décapotable ».
-    <h1>Hello World !</h1>
-    <div></div>
+    <h1>Listes des blagues nul :</h1>
+    <h2>1. C'est l'histoire du ptit dej, tu la connais ?</h2>
+    <button onclick="toggleAnswer('answer1'); dropImage()" class="ugly-button">Aficher la réponse 1</button>
+    <div id="answer1" class="answer hidden">Pas de bol.</div>
+
+    <h2>2. C'est l'histoire d'une blague vaseuse</h2>
+    <button onclick="toggleAnswer('answer2'); dropImage()" class="ugly-button">Afficher la raiponse 2</button>
+    <div id="answer2" class="answer hidden">Mets tes bottes.</div>
+
+    <h2>3. C'est l'histoire d'un pingouin qui respire par les fesses</h2>
+    <button onclick="toggleAnswer('answer3'); dropImage()" class="ugly-button">Affichez la réponse 3</button>
+    <div id="answer3" class="answer hidden">Un jour il s’assoit et il meurt.</div>
+
+    <h2>4. Comment appelle-t-on une chauve-souris avec une perruque ?</h2>
+    <button onclick="toggleAnswer('answer4'); dropImage()" class="ugly-button">Affiché la réponse 4</button>
+    <div id="answer4" class="answer hidden">Une souris.</div>
+
+    <h2>5. Que dit un escargot quand il croise une limace ?</h2>
+    <button onclick="toggleAnswer('answer5'); dropImage()" class="ugly-button">Afficher la réponçe 5</button>
+    <div id="answer5" class="answer hidden">"Oh la belle décapotable"</div>
+
+    <audio id="clickSound" src="son/clickSound.mp3"></audio>
+    <button class="cacherTaVue">Chut!!!</button>
+    <script src="code.js"></script>  
   </body>
 </html>
