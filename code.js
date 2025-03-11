@@ -77,3 +77,28 @@ function propostion(){
 function about(){
     window.location.href = "about.html"
 }
+
+document.querySelector('.fleche img').addEventListener('click', function() {
+    window.scrollTo({
+        left: window.innerWidth, // Défiler à droite de la largeur de l'écran
+        behavior: 'smooth' // Défilement fluide
+    });
+});
+
+const backButton = document.getElementById('backButton');
+
+document.querySelector('.fleche img').addEventListener('click', function() {
+    window.scrollTo({
+        left: window.innerWidth, 
+        behavior: 'smooth'
+    });
+    backButton.style.display = 'block'; // Affiche le bouton retour
+});
+
+backButton.addEventListener('click', function() {
+    window.scrollTo({
+        left: 0,
+        behavior: 'smooth'
+    });
+    backButton.style.display = 'none'; // Cache le bouton après retour
+});
