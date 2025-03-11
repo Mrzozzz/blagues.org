@@ -11,7 +11,8 @@
     
   </head>
   <body>
-    <h1>LES BLAGUES NULLES</h1>
+    <div class="main">
+    <h1>Blagues Tah les fous</h1>
     <h2>1. C'est l'histoire du ptit dej, tu la connais ?</h2>
     <button onclick="toggleAnswer('answer1'); dropImage()" class="ugly-button">Aficher la réponse 1</button>
     <div id="answer1" class="answer hidden">Pas de bol.</div>
@@ -33,7 +34,26 @@
     <div id="answer5" class="answer hidden">"Oh la belle décapotable"</div>
 
     <audio id="clickSound" src="son/clickSound.mp3"></audio>
-    <button class="cacherTaVue">Chut!!!</button>
+    <button class="showPopup" id="showPopup">larme</button>
+    <div class="popup-container" id="popupContainer">
+      <div class="popup">
+          <img src="images/heWillNotDivideUs.png" alt="Image affichée">
+      </div>
+  </div>
+  </div>
+  <div class="sidebar">
+    <div>
+    <div class="logo"><img src="images/logo.gif"></div>
+    <button onclick="propositon()" class="beauf-button">Propositon</button>
+    <button onclick="About()" class="beauf-button">About Us</button>
+  </div>
+  <div>
+    <p>CÔME Enzo</p>
+    <p>LANDAIS Nolan</p>
+    <p>SAEGAERT Baptiste</p>
+  </div>
+  
+  </div>
     <script src="code.js"></script>  
   </body>
 </html>

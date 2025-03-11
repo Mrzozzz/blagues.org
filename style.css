@@ -1,13 +1,27 @@
 html, body {
     text-align: center;
     background-image: url(images/background/background.png);
-
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-start;
+    width: 115%;
+    padding:0px;
+    margin: 0px;
 }
 
-h1{
-    color: red;
+h1 {
     font-size: 50px;
-    font-family: 'Yahoo', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: neonBlink 0.3s infinite alternate;
+}
+
+@keyframes neonBlink {
+    0% { color: red; text-shadow: 0 0 10px red, 0 0 20px red; }
+    25% { color: blue; text-shadow: 0 0 10px blue, 0 0 20px blue; }
+    50% { color: lime; text-shadow: 0 0 10px lime, 0 0 20px lime; }
+    75% { color: yellow; text-shadow: 0 0 10px yellow, 0 0 20px yellow; }
+    100% { color: fuchsia; text-shadow: 0 0 10px fuchsia, 0 0 20px fuchsia; }
 }
 
 p{
@@ -17,6 +31,10 @@ p{
 }
 h2{
     background-color: greenyellow;
+}
+
+.main{
+    width: 100%;
 }
 
 .hidden {
@@ -66,7 +84,7 @@ h2{
     height: 80px;
     animation: fall 3s linear forwards;
 }
-.cacherTaVue{
+.showPopup{
     font-size: 10px;
     font-family: "Comic Sans MS", cursive;
     border-radius: 50%;
@@ -76,6 +94,7 @@ h2{
     position:absolute;
     bottom:20px;
     left:20px;
+    opacity: 20%;
 }
 
 @keyframes fall {
@@ -87,11 +106,4 @@ h2{
         transform: translateY(100vh) rotate(720deg);
         opacity: 0;
     }
-}
-
-@font-face {
-    font-family: 'Yahoo'; /* Nom que tu veux donner */
-    src: url('police/Yahoo.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
 }

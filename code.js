@@ -47,3 +47,33 @@ function dropImage() {
         img.remove();
     }, 3000);
 }
+
+
+
+// Récupération des éléments
+const showPopupBtn = document.getElementById("showPopup");
+const closePopupBtn = document.getElementById("closePopup");
+const popupContainer = document.getElementById("popupContainer");
+const popup = document.getElementById("popup");
+// Fonction pour afficher le pop-up
+showPopupBtn.addEventListener("click", function () {
+    popupContainer.classList.add("show");
+});
+// Fonction pour fermer le pop-up
+function closePopup() {
+    popupContainer.classList.remove("show");
+}
+// Fermer le pop-up en cliquant en dehors de la boîte
+popupContainer.addEventListener("click", function (e) {
+    if (e.target === popupContainer) { // Vérifie que l'on clique bien en dehors
+        closePopup();
+    }
+});
+
+
+function propostion(){
+    window.location.href = "Proposition.html"
+}
+function about(){
+    window.location.href = "about.html"
+}
