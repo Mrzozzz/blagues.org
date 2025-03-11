@@ -1,7 +1,10 @@
 html, body {
     text-align: center;
     background-image: url(images/background/background.png);
-
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-start;
+    width: 115%;
 }
 
 h1 {
@@ -26,6 +29,10 @@ p{
 }
 h2{
     background-color: greenyellow;
+}
+
+.main{
+    width: 100%;
 }
 
 .hidden {
@@ -148,4 +155,74 @@ h2{
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+}
+
+
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff0066, #ffcc00, #33cc33, #3399ff);
+    background-size: 300% 300%;
+    animation: gradientBG 5s ease infinite;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.category {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+.category:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+.blague {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.beauf-button {
+    background: linear-gradient(45deg, #ff00ff, #ffff00, #00ff00);
+    border: 4px solid #ff0000;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 2px #ff0000;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.2s ease-in-out;
+    animation: clignote 1.5s infinite alternate;
+}
+
+@keyframes clignote {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.5); }
+}
+
+.beauf-button:hover {
+    background: linear-gradient(45deg, #ffff00, #ff00ff, #00ff00);
+    transform: scale(1.1) rotate(-2deg);
+    animation: secoue 0.2s infinite alternate;
+}
+
+@keyframes secoue {
+    0% { transform: rotate(-2deg) scale(1.1); }
+    100% { transform: rotate(2deg) scale(1.1); }
 }

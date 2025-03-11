@@ -69,3 +69,11 @@ popupContainer.addEventListener("click", function (e) {
         closePopup();
     }
 });
+
+
+function propostion(){
+    window.location.href = "Proposition.html"
+}
+function about(){
+    window.location.href = "about.html"
+}
