@@ -4,9 +4,11 @@ html, body {
     display: flex;
     justify-content: baseline;
     align-items: flex-start;
-    width: 115%;
+    width: 200vw; /* Double la largeur de l'écran */
     padding:0px;
     margin: 0px;
+    overflow-x: hidden; /* Cache la barre de défilement latérale */
+    flex-direction: row;
 }
 
 h1 {
@@ -34,7 +36,7 @@ h2{
 }
 
 .main{
-    width: 100%;
+    width: 100vw; /* Une section pleine largeur */
 }
 .fleche{
     position: absolute;
@@ -187,7 +189,7 @@ h2{
 
 
 .sidebar {
-    width: 250px;
+    width: 100vw; /* Deuxième section (partie cachée initialement) */
     height: 95vh;
     background: linear-gradient(45deg, #ff0066, #ffcc00, #33cc33, #3399ff);
     background-size: 300% 300%;
@@ -196,8 +198,9 @@ h2{
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     gap: 15px;
+    align-items: center;
 }
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
@@ -250,4 +253,18 @@ h2{
 }
 .logo img{
     width: 100%;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Caché au début */
 }
